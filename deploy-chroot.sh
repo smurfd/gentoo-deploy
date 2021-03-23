@@ -50,7 +50,7 @@ cd /etc/init.d && ln -s net.lo net.$NC && rc-update add net.$NC default
 echo "$IP $HOST.$DNS $HOST" >> /etc/hosts
 
 # Set root pw
-echo $ROOTPW | passwd root –-stdin
+echo $ROOTPW | passwd root
 
 # Set Swedish keyboard
 echo 'keymap="sv-latin1"' >> /etc/conf.d/keymaps
@@ -70,7 +70,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # Add user
 useradd -m -G users,wheel,audio,video -s /bin/zsh $USR
-echo $USRPW | passwd $USR –-stdin
+echo $USRPW | passwd $USR
 
 # Exit and reboot
 exit
