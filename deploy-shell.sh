@@ -126,7 +126,11 @@ setopt HIST_REDUCE_BLANKS
 
 export PATH=\$HOME/.cargo/bin:\$HOME/.local/bin:\$PATH
 
+if uname | grep -q 'Darwin' ; then
+alias ls="ls -pG"
+else 
 alias ls="ls --color -p"
+fi
 
 # start typing + [Up-Arrow] - fuzzy find history forward
 autoload -U up-line-or-beginning-search
