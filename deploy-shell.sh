@@ -141,6 +141,10 @@ if [[ "\${terminfo[kcud1]}" != "" ]]; then
   bindkey "\${terminfo[kcud1]}" down-line-or-beginning-search
 fi
 
+# tab completion
+autoload -U compinit promptinit
+compinit
+
 PROMPT='%B%F{176}%n@%m%f%b {%2~} '
 EOL
 
