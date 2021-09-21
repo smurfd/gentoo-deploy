@@ -44,7 +44,10 @@ case $OS in
   ;;
   "Darwin")
     echo "darwin"
-    brew install zsh vim tmux
+    if [ -f "/opt/local/bin/port" ]; then
+      sudo port install zsh vim tmux
+    else
+      brew install zsh vim tmux
   ;;
 esac
 
