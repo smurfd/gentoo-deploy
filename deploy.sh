@@ -69,8 +69,8 @@ chmod +x /mnt/gentoo/deploy-chroot.sh
 
 # Get the latest stage3 file
 cd /mnt/gentoo
-wget $URL/latest-stage3-amd64-hardened.txt
-URL2=`cat latest-stage3-amd64-hardened.txt|grep -v "^#" | cut -d" " -f1`
+wget $URL/latest-stage3-amd64-hardened-openrc.txt
+URL2=`cat latest-stage3-amd64-hardened-openrc.txt|grep -v "^#" | cut -d" " -f1`
 wget $URL/$URL2
 
 # unpack the tarball
