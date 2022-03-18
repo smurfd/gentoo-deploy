@@ -14,8 +14,9 @@ echo "USRPW=$9" >> setup.cfg #iisn00bN0H473
 echo "LOCAL=true" >> setup.cfg
 echo "KVM=true" >> setup.cfg
 
-wget https://github.com/smurfd/gentoo-deploy/blob/main/deploy.sh
-wget https://github.com/smurfd/gentoo-deploy/blob/main/deploy-chroot.sh
-wget https://github.com/smurfd/gentoo-deploy/blob/main/kern.cfg
-wget https://github.com/smurfd/gentoo-deploy/blob/main/kern-kvm.cfg
+wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy.sh
+wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy-chroot.sh
+wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kern.cfg
+wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kern-kvm.cfg
+
 
