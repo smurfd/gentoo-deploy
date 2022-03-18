@@ -16,7 +16,7 @@ echo "KVM=true" >> setup.cfg
 
 wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy.sh
 wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy-chroot.sh
-wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kern.cfg
-wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kern-kvm.cfg
+wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kernel.cfg
+wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kernel-kvm.cfg
 
 
