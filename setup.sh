@@ -19,4 +19,4 @@ wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy-chroot.s
 wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kernel.cfg
 wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kernel-kvm.cfg
 
-
+sh deploy.sh
