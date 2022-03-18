@@ -20,7 +20,8 @@ else
 fi
 
 # Configure network for the install
-ifconfig $NC $IP 192.168.0.255 netmask 255.255.255.0 up
+ip a add $IP dev $NC
+ip link set $NC up
 route add default gw 192.168.0.1
 echo 'nameserver 192.168.0.1' >> /etc/resolv.conf
 
