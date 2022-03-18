@@ -3,7 +3,7 @@
 # and grabbed this script from https://smurfd.serveblog.net/gentoo/deploy_gentoo.sh
 # THIS WILL WIPE YOUR DRIVE
 
-source setup.cfg
+source ./setup.cfg
 
 # Add some config files or parts of configfiles to $SITE/ for easily be able to wget
 
