@@ -3,21 +3,19 @@ A deploy script to install Gentoo Linux on a new machine or VirtualMachine<br>
 Warning !!! [IT WILL WIPE YOUR DRIVE] !!!<br>
 Anything goes wrong, its your fault! :)<br>
 
-Pretty much, boot a new machine or virtual machine with the Gentoo Live ISO<br>
-See that internet works, then :<br>
+1. Boot a new machine or virtual machine with the Gentoo Live ISO <br>
+2. $ nc -v -w 3 www.gentoo.org 80  # Verify internet access <br>
 <br>
-$ wget https://github.com/smurfd/gentoo-deploy/blob/main/deploy.sh<br>
-$ wget https://github.com/smurfd/gentoo-deploy/blob/main/deploy-chroot.sh<br>
-$ wget https://github.com/smurfd/gentoo-deploy/blob/main/deploy.cfg<br>
-$ wget https://github.com/smurfd/gentoo-deploy/blob/main/kern.cfg<br>
+Grab and run setup script <br>
+3. $ curl https://github.com/smurfd/gentoo-deploy/blob/main/setup.sh -o setup.sh | sh ./setup.sh IP DNS NIS Host IF HD HDD usr pwd <br>
+example : <br>
+$ curl https://github.com/smurfd/gentoo-deploy/blob/main/setup.sh -o setup.sh | sh ./setup.sh 192.168.0.2 monkey island ghost enp2s0 /dev/sda /dev/nvme0n1 blowfish blowfishpwd <br>
 <br>
-READ THE SCRIPTS AND CFG FILE.<br>
-Modify according to your needs<br>
 <br>
-I mean its made for me mostly, but could maby be used by someone else if they know what they are doing.<br>
+Made it for me, You find it useful? Use at own risk<br>
 <br>
 Please, give it a shot in a VirtualMachine first<br>
-(anything happens after you download the 1st script... ITS YOUR FAULT!)<br>
+(anything happens after you download the script... ITS YOUR FAULT!)<br>
 <br>
 <br>
 <br>

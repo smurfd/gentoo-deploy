@@ -3,7 +3,7 @@
 # and grabbed this script from https://smurfd.serveblog.net/gentoo/deploy_gentoo.sh
 # THIS WILL WIPE YOUR DRIVE
 
-source deploy.cfg
+source setup.cfg
 
 # Add some config files or parts of configfiles to $SITE/ for easily be able to wget
 
@@ -64,7 +64,7 @@ mkdir /mnt/gentoo/home
 mount "${HDD}2" /mnt/gentoo/boot/efi
 mount "${HDD}5" /mnt/gentoo/home
 
-cp deploy.cfg deploy-chroot.sh /mnt/gentoo
+cp setup.cfg deploy-chroot.sh /mnt/gentoo
 chmod +x /mnt/gentoo/deploy-chroot.sh
 
 # Get the latest stage3 file
