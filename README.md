@@ -7,9 +7,9 @@ Anything goes wrong, its your fault! :)<br>
 2. Verify internet access <br>
 <br>
 Grab and run setup script <br>
-3. $ curl https://github.com/smurfd/gentoo-deploy/blob/main/setup.sh -o setup.sh | sh ./setup.sh IP DNS NIS Host IF HD HDD usr pwd <br>
+3. $ curl https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/setup.sh -o setup.sh | sh ./setup.sh IP DNS NIS Host IF HD HDD usr pwd <br>
 example : <br>
-$ curl https://github.com/smurfd/gentoo-deploy/blob/main/setup.sh -o setup.sh | sh ./setup.sh 192.168.0.2 monkey island ghost enp2s0 /dev/sda /dev/nvme0n1 blowfish blowfishpwd <br>
+$ curl https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/setup.sh -o setup.sh | sh ./setup.sh 192.168.0.2 monkey island ghost enp2s0 /dev/sda /dev/nvme0n1 blowfish blowfishpwd <br>
 <br>
 <br>
 Made it for me, You find it useful? Use at own risk<br>
