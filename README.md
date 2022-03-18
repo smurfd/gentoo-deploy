@@ -4,7 +4,7 @@ Warning !!! [IT WILL WIPE YOUR DRIVE] !!!<br>
 Anything goes wrong, its your fault! :)<br>
 
 1. Boot a new machine or virtual machine with the Gentoo Live ISO <br>
-2. $ nc -v -w 3 www.gentoo.org 80  # Verify internet access <br>
+2. Verify internet access <br>
 <br>
 Grab and run setup script <br>
 3. $ curl https://github.com/smurfd/gentoo-deploy/blob/main/setup.sh -o setup.sh | sh ./setup.sh IP DNS NIS Host IF HD HDD usr pwd <br>
