@@ -62,7 +62,7 @@ mkdir /mnt/gentoo/boot/efi
 mkdir /mnt/gentoo/home
 mount "${HDD}2" /mnt/gentoo/boot/efi
 
-cp setup.cfg deploy-chroot.sh /mnt/gentoo
+cp setup.cfg deploy-chroot.sh kern* /mnt/gentoo
 chmod +x /mnt/gentoo/deploy-chroot.sh
 
 # Get the latest stage3 file
