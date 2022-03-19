@@ -38,19 +38,17 @@ parted $HD --script unit MB                   #Sets the unit to MegaBytes
 parted $HD --script mkpart primary 1 20       #Makes a primary partition starting from 1 MegaByte to #20th for bios
 parted $HD --script mkpart primary 21 500     #Partition /boot filesystem
 parted $HD --script mkpart primary 501 7500   #Partition of size 2000MB made for swap
-parted $HD --script mkpart primary 7501 107500    #Partition for the /(root) filesystem.
-parted $HD --script -- mkpart primary 107501 -1   # partition for the rest of the disk /home
+parted $HD --script -- mkpart primary 7501 -1    #Partition for the /(root) filesystem.
 parted $HD --script print
 parted $HD --script name 1 grub
 parted $HD --script set 1 bios_grub on        #The partition number 1 has its bios_grub flag set to one
 parted $HD --script name 2 boot
 parted $HD --script name 3 swap
 parted $HD --script name 4 root
-parted $HD --script name 5 home
+
 
 # Create the filesystems
 mkfs.ext4 "${HDD}4" 
-mkfs.ext4 "${HDD}5"
 mkfs.fat -F 32 "${HDD}2"
 mkswap "${HDD}3"
 swapon "${HDD}3"
@@ -63,7 +61,6 @@ mkdir /mnt/gentoo/boot
 mkdir /mnt/gentoo/boot/efi
 mkdir /mnt/gentoo/home
 mount "${HDD}2" /mnt/gentoo/boot/efi
-mount "${HDD}5" /mnt/gentoo/home
 
 cp setup.cfg deploy-chroot.sh /mnt/gentoo
 chmod +x /mnt/gentoo/deploy-chroot.sh
@@ -110,7 +107,7 @@ mkdir --parents /mnt/gentoo/var/db/repos/gentoo
 
 # Set local rsync mirror
 if [ $LOCAL = true ]; then
-sed -i 's/sync-uri = rsync:\/\/rsync.gentoo.org\/gentoo-portage/sync-uri = rsync:\/\/192.168.0.10\/gentoo-portage/g' /mnt/gentoo/etc/portage/repos.conf/gentoo.conf
+sed -i 's/sync-uri = rsync:\/\/rsync.gentoo.org\/gentoo-portage/sync-uri = rsync:\/\/192.168.0.39\/gentoo-portage/g' /mnt/gentoo/etc/portage/repos.conf/gentoo.conf
 fi
 
 # Mount the system partitions
