@@ -98,7 +98,7 @@ echo '# This sets the language of build output to English.' >> /mnt/gentoo/etc/p
 echo '# Please keep this setting intact when reporting bugs.' >> /mnt/gentoo/etc/portage/make.conf
 echo 'LC_MESSAGES=C' >> /mnt/gentoo/etc/portage/make.conf
 if [ $LOCAL = true ]; then
-echo 'GENTOO_MIRRORS="rsync://192.168.0.10/gentoo"' >> /mnt/gentoo/etc/portage/make.conf
+echo 'GENTOO_MIRRORS="rsync://192.168.0.39/gentoo"' >> /mnt/gentoo/etc/portage/make.conf
 else
 echo 'GENTOO_MIRRORS="http://gentoo.osuosl.org/"' >> /mnt/gentoo/etc/portage/make.conf
 fi
