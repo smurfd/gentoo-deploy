@@ -26,7 +26,6 @@ locale-gen && eselect locale set 6 && env-update && source /etc/profile
 echo "${HDD}2   /boot/efi    ext4    defaults, noatime    0 2" > /etc/fstab
 echo "${HDD}3   none         swap    sw                   0 0" >> /etc/fstab
 echo "${HDD}4   /            ext4    noatime              0 1" >> /etc/fstab
-echo "${HDD}5   /home        ext4    noatime              0 1" >> /etc/fstab
 
 # Emerge the kernel & genkernel
 emerge --quiet sys-kernel/gentoo-sources sys-kernel/genkernel
