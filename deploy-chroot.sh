@@ -33,10 +33,10 @@ emerge --quiet sys-kernel/gentoo-sources sys-kernel/genkernel
 
 # Compile the kernel
 if [ $KVM = false ]; then
-wget $SITE/kernel.cfg
+# wget $SITE/kernel.cfg
 genkernel --kernel-config=kernel.cfg all
 else
-wget $SITE/kernel-kvm.cfg
+# wget $SITE/kernel-kvm.cfg
 genkernel --kernel-config=kernel-kvm.cfg all
 fi
 
