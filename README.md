@@ -10,7 +10,7 @@ Anything goes wrong, its your fault! :)<br>
 5. Grab and run setup script <br>
    $ `curl https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/setup.sh -o setup.sh`
 6. $ `sh ./setup.sh 192.168.0.2 monkey island ghost enp2s0 /dev/sda /dev/sda blowfish blowfishpwd` <br>
-          (`sh ./setup.sh IP DNS NIS Host IF HD HDD usr pwd`)
+          (`sh ./setup.sh IP DNS NIS Host IF HD HDD usr pwd` : pwd needs to be have both Aa1! kind of letters)
 7. $ `touch isolomlyswearimuptono.good`
 8. $ `sh ./deploy.sh`
 <br>
