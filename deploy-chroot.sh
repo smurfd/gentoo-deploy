@@ -60,7 +60,7 @@ echo root:$ROOTPW | chpasswd
 echo 'keymap="sv-latin1"' >> /etc/conf.d/keymaps
 /etc/init.d/keymaps restart
 
-echo 'USE="logrotate elogind nftables xtables dbus -sendmail"' >> /etc/portage/make.conf
+echo 'USE="logrotate elogind nftables xtables dbus symlink -sendmail"' >> /etc/portage/make.conf
 
 # Install some systemtools
 emerge -vD sysklogd cronie e2fsprogs mlocate openntpd nftables --quiet
