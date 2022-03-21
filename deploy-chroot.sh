@@ -37,10 +37,10 @@ ln -s linux* linux
 # Compile the kernel
 if [ $KVM = false ]; then
 # wget $SITE/kernel.cfg
-genkernel --kernel-config=kernel.cfg all
+genkernel --kernel-config=/kernel.cfg all
 else
 # wget $SITE/kernel-kvm.cfg
-genkernel --kernel-config=kernel-kvm.cfg all
+genkernel --kernel-config=/kernel-kvm.cfg all
 fi
 
 # Set hostname / domain
