@@ -30,6 +30,10 @@ echo "${HDD}4   /            ext4    noatime              0 1" >> /etc/fstab
 # Emerge the kernel & genkernel
 emerge --quiet sys-kernel/gentoo-sources sys-kernel/genkernel
 
+# Create symlink
+cd /usr/src/
+ln -s linux* linux
+
 # Compile the kernel
 if [ $KVM = false ]; then
 # wget $SITE/kernel.cfg
