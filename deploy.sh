@@ -119,7 +119,7 @@ chroot /mnt/gentoo ./deploy-chroot.sh
 # Clearing out some downloaded things from the chroot 
 rm /mnt/gentoo/deploy.sh
 rm /mnt/gentoo/deploy-chroot.sh
-rm /mnt/gentoo/kernel.cfg
+rm /mnt/gentoo/*.cfg
 rm /mnt/gentoo/latest*.txt
 rm /mnt/gentoo/stage*
 
