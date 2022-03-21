@@ -1,6 +1,6 @@
 #!/bin/bash
 # We assume that you have booted the live iso at a new gentoo machine
-# and grabbed this script from https://smurfd.serveblog.net/gentoo/deploy_gentoo.sh
+# and grabbed this script from https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy.sh
 # THIS WILL WIPE YOUR DRIVE
 
 source ./setup.cfg
