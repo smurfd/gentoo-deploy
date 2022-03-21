@@ -111,7 +111,7 @@ sed -i 's/sync-uri = rsync:\/\/rsync.gentoo.org\/gentoo-portage/sync-uri = rsync
 fi
 
 # Mount the system partitions
-mount --types proc /proc /mnt/gentoo/proc &&  mount --rbind /sys /mnt/gentoo/sys && mount --make-rslave /mnt/gentoo/sys && mount --rbind /dev /mnt/gentoo/dev && mount --make-rslave /mnt/gentoo/dev
+mount --types proc /proc /mnt/gentoo/proc &&  mount --rbind /sys /mnt/gentoo/sys && mount --make-rslave /mnt/gentoo/sys && mount --rbind /dev /mnt/gentoo/dev && mount --make-rslave /mnt/gentoo/dev && mount --bind /run /mnt/gentoo/run && mount --make-slave /mnt/gentoo/run
 
 # Enter chroot
 chroot /mnt/gentoo ./deploy-chroot.sh 
