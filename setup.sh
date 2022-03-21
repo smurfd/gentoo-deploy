@@ -8,15 +8,15 @@ echo "HOST=$4" >> setup.cfg # ghost
 echo "NC=$5" >> setup.cfg # enp2s0
 echo "HD=$6" >> setup.cfg # /dev/sda
 echo "HDD=$7" >> setup.cfg # /dev/nvme0n1
-echo "ROOTPW=iisl33thaxx0rm3" >> setup.cfg
+echo "ROOTPW=iisl33thaxx0rm3_" >> setup.cfg
 echo "USR=$8" >> setup.cfg # blowfish
 echo "USRPW=$9" >> setup.cfg #iisn00bN0H473
 echo "LOCAL=true" >> setup.cfg
 echo "KVM=true" >> setup.cfg
 
-wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy.sh
-wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy-chroot.sh
-wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kernel.cfg
-wget https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kernel-kvm.cfg
+wget -quiet https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy.sh
+wget -quiet https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy-chroot.sh
+wget -quiet https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kernel.cfg
+wget -quiet https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/kernel-kvm.cfg
 
 sh ./deploy.sh
