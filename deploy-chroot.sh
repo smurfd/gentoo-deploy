@@ -48,7 +48,7 @@ echo "hostname=${HOST}" > /etc/conf.d/hostname
 
 echo "dns_domain_lo=${DNS}" > /etc/conf.d/net
 echo "nis_domain_lo=${NIS}" >> /etc/conf.d/net
-echo "config_"${NC}"="'"${IP} netmask 255.255.255.0 brd 192.168.0.255"' >> /etc/conf.d/net
+echo "config_"${NC}"="${IP}'" netmask 255.255.255.0 brd 192.168.0.255"' >> /etc/conf.d/net
 echo "routes_"${NC}"="'"default via 192.168.0.1"' >> /etc/conf.d/net
 
 # Configure the network
