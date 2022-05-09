@@ -23,31 +23,38 @@ fi
 if [ "$SYSTEM" == "Darwin" ]; then
   OS="Darwin"
 fi
+if [ "$SYSTEM" == "FreeBSD" ]; then
+  OS="FreeBSD"
+fi
+if [ "$SYSTEM" == "NetBSD" ]; then
+  OS="NetBSD"
+fi
 
 # based on os install zsh, vim and tmux
 case $OS in
   "Gentoo")
-    echo "gentoo"
     sudo emerge -v zsh vim tmux
   ;;
   "Suse")
-    echo "suse"
     sudo zypper in zsh vim tmux
   ;;
   "Debian")
-    echo "debian"
     sudo apt install zsh vim tmux
   ;;
   "Redhat")
-    echo "redhat"
     sudo dnf install zsh vim tmux
   ;;
   "Darwin")
-    echo "darwin"
     if [ -f "/opt/local/bin/port" ]; then
       sudo port install zsh vim tmux
     else
       brew install zsh vim tmux
+  ;;
+  "FreeBSD")
+    doas pkg install zsh vim tmux
+  ;;
+  "NetBSD")
+    doas pkgin install zsh vim tmux
   ;;
 esac
 
