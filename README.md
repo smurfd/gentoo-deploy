@@ -14,6 +14,8 @@ Anything goes wrong, its your fault! :)<br>
 7. $ `touch isolomlyswearimuptono.good`
 8. $ `sh ./deploy.sh`
 <br>
+# Deploy my shell configs
+`curl -sSf https://raw.githubusercontent.com/smurfd/gentoo-deploy/main/deploy-shell.sh | sh`
 <br>
 Made it for me, You find it useful? Use at own risk<br>
 <br>
