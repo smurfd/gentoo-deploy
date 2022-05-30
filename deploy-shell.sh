@@ -29,6 +29,9 @@ fi
 if [ "$SYSTEM" == "NetBSD" ]; then
   OS="NetBSD"
 fi
+if [ "$SYSTEM" == "OpenBSD" ]; then
+  OS="OpenBSD"
+fi
 
 # based on os install zsh, vim and tmux
 case $OS in
@@ -54,6 +57,9 @@ case $OS in
     doas pkg install zsh vim tmux
   ;;
   "NetBSD")
+    doas pkgin install zsh vim tmux
+  ;;
+  "OpenBSD")
     doas pkgin install zsh vim tmux
   ;;
 esac
