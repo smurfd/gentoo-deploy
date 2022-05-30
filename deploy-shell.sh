@@ -52,6 +52,7 @@ case $OS in
       sudo port install zsh vim tmux
     else
       brew install zsh vim tmux
+    fi
   ;;
   "FreeBSD")
     doas pkg install zsh vim tmux
