@@ -52,8 +52,10 @@ case $OS in
       sudo port install zsh vim tmux
     elif [ -f "/opt/pkg/bin/pkgin" ]; then
       sudo pkgin install zsh vim tmux
-    else
+    elif [ -f "/opt/homebrew/bin/brew" ]; then
       brew install zsh vim tmux
+    else
+      echo "Install a package manager (port | pkgin | brew)"
     fi
   ;;
   "FreeBSD")
