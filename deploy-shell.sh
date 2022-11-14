@@ -50,6 +50,8 @@ case $OS in
   "Darwin")
     if [ -f "/opt/local/bin/port" ]; then
       sudo port install zsh vim tmux
+    elif [ -f "/opt/pkg/bin/pkgin" ]; then
+      sudo pkgin install zsh vim tmux
     else
       brew install zsh vim tmux
     fi
